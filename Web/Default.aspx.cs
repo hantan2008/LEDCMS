@@ -18,7 +18,7 @@ namespace Web
         {
             if (!IsPostBack)
             {
-                InitData();
+                InitData(); 
             }
         }
 
