@@ -22,6 +22,9 @@ namespace Web
             }
         }
 
+        /// <summary>
+        /// 初始化数据
+        /// </summary>
         private void InitData()
         {
            //载入首页新闻
