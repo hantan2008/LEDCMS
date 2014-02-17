@@ -1,0 +1,56 @@
+﻿* {margin:0;padding:0;}
+body 
+{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	border: none 0 white;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+text-align:center;
+height:100%;
+}
+
+#tbContext {border-collapse:collapse;border:1px solid #B3D4EF;}
+#tbContext tr{height:30px;}
+#tbContext td{padding:1px;border:1px solid #B3D4EF;}
+
+
+
+td {font-size:12px;line-height:24px;margin:0; }
+a:link,a:visited{text-decoration:none;color:#333333;}
+/*选项卡切换*/
+.titlemouseover
+{ 
+    	background-image:url('../images/titlebg1.gif');
+    	width:80px;
+    	height:26px;
+    	text-align:center;
+    	font-size:12px;
+    	cursor:hand;
+}
+.tabtitle
+{ 
+    	background-image:url('../images/titlebg2.gif');
+    	width:80px;
+    	height:26px;
+    	text-align:center;
+    	font-size:12px;
+    	cursor:hand;
+}
+
+a:hover,a:active{color:#F30;text-decoration:underline;}
+
+.STYLE1 {
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.STYLE2 {font-size: 9px}
+.STYLE3 {
+	color: #033d61;
+	font-size: 12px;}
+.navPoint { 
+COLOR: white; CURSOR: hand; FONT-FAMILY: Webdings; FONT-SIZE: 9pt 
+
+.ManagerForm { margin:10;}
