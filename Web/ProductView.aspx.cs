@@ -43,7 +43,7 @@ namespace Web
                 string ProductName = model.CMS_ProductName;
 
                 StringBuilder str = new StringBuilder();
-                str.Append("<a href='" + ProductImg + "' title=\"" + CMS_ProductName + "\">");
+                str.Append("<a href='" + ProductImg + "' title=\"" + ProductName + "\">");
                 str.Append("<img alt=\"" + ProductName + "\" src=\"" + ProductImg + "\"  Width=\"300\" Height=\"300\" class=\"photo\"/>");
                 str.Append("</a>");
 
