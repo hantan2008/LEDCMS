@@ -103,9 +103,8 @@
                                             <tr>
                                                 <td style="width: 50%">
                                                     <div class="photoblock-many">
-                                                        <a href='<%=  model.CMS_ProductImg %>' title="<%=  model.CMS_ProductName %>">
-                                                            <asp:Image ID="imgproduct" runat="server" Width="300" Height="300" class="photo" />
-                                                        </a>
+                                                        <asp:Literal ID="lblimgproduct" runat="server"></asp:Literal>
+                                                        
                                                     </div>
                                                     <br />
                                                     <span style="text-align: center; width: 100%">查看大图</span>

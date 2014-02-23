@@ -40,13 +40,13 @@ namespace Web {
         protected global::Web.Control.ProductClass ProductClass1;
         
         /// <summary>
-        /// imgproduct 控件。
+        /// lblimgproduct 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgproduct;
+        protected global::System.Web.UI.WebControls.Literal lblimgproduct;
         
         /// <summary>
         /// lblProductName 控件。
