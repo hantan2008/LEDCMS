@@ -103,6 +103,51 @@ namespace Web.admin.sysManage.Config {
         protected global::System.Web.UI.WebControls.TextBox txtWebCopyright;
         
         /// <summary>
+        /// txtWebPath 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtWebPath;
+        
+        /// <summary>
+        /// txtWebManagePath 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtWebManagePath;
+        
+        /// <summary>
+        /// txtWebFilePath 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtWebFilePath;
+        
+        /// <summary>
+        /// txtWebFileType 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtWebFileType;
+        
+        /// <summary>
+        /// txtWebFileSize 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtWebFileSize;
+        
+        /// <summary>
         /// btnSave 控件。
         /// </summary>
         /// <remarks>

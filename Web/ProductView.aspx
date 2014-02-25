@@ -102,7 +102,7 @@
                                         <table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td style="width: 50%">
-                                                    <div class="photoblock-many">
+                                                    <div class="photoblock-many" >
                                                         <asp:Literal ID="lblimgproduct" runat="server"></asp:Literal>
                                                         
                                                     </div>

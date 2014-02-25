@@ -36,8 +36,11 @@ namespace Web.admin.sysManage.Config
             txtWebDescription.Text = webset.WebDescription.ToString();
             txtWebCopyright.Text = webset.WebCopyright;
 
-            //txtWebPath.Text = webset.WebPath;
-            //txtWebManagePath.Text = webset.WebManagePath;
+            txtWebPath.Text = webset.WebPath;
+            txtWebManagePath.Text = webset.WebManagePath;
+            txtWebFilePath.Text = webset.WebFilePath;
+            txtWebFileType.Text = webset.WebFileType.ToString();
+            txtWebFileSize.Text = webset.WebFileSize.ToString();
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -53,6 +56,12 @@ namespace Web.admin.sysManage.Config
             model.WebCopyright = txtWebCopyright.Text;
             model.WebKeywords = txtWebKeywords.Text.Trim();
             model.WebDescription = txtWebDescription.Text.Trim();
+
+            model.WebPath = txtWebPath.Text;
+            model.WebManagePath = txtWebManagePath.Text;
+            model.WebFilePath = txtWebFilePath.Text;
+            model.WebFileType = txtWebFileType.Text;
+            model.WebFileSize = int.Parse(txtWebFileSize.Text.Trim());
 
             //修改配置信息
             CMS.DAL.WebSet dal = new CMS.DAL.WebSet();

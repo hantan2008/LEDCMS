@@ -5,20 +5,14 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" type="text/css" href="../../Images/style.css" />
-
     <script type="text/javascript" language="javascript" src="../../../js/jquery-1.3.2.min.js"></script>
-
     <script type="text/javascript" language="javascript" src="../../../js/jquery.validate.min.js"></script>
-
     <script type="text/javascript" language="javascript" src="../../../js/messages_cn.js"></script>
-
     <script type="text/javascript" language="javascript" src="../../../js/jquery.form.js"></script>
-
     <script type="text/javascript" language="javascript" src="../../js/function.js"></script>
-
     <script type="text/javascript">
 
-       
+
         $(function () {
             //表单验证JS
             $("#form1").validate({
@@ -127,6 +121,63 @@
                 <td>
                     <asp:TextBox ID="txtWebCopyright" runat="server" TextMode="MultiLine" CssClass="textarea"
                         Style="width: 300px; height: 80px;" HintTitle="网站版权信息" HintInfo="该信息将会显示在网站的底部，支持HTML标志填写，所以请认真填写。"></asp:TextBox>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="spClear">
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="msgtable">
+        <tbody>
+            <tr>
+                <th colspan="2" align="left">
+                    <strong>系统参数设置</strong>
+                </th>
+            </tr>
+            <tr>
+                <td width="25%" align="right">
+                    虚拟目录：
+                </td>
+                <td width="75%">
+                    <asp:TextBox ID="txtWebPath" runat="server" CssClass="input required" size="25" MaxLength="20"
+                        HintTitle="网站的虚拟目录" HintInfo="请填写网站的虚拟目录名称，如果放在根目录下，输入“/”；如：http://abc.com/web，输入“/web/”，要加“/”开头和结尾，否则系统无法使用。"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    后台管理目录：
+                </td>
+                <td>
+                    <asp:TextBox ID="txtWebManagePath" runat="server" CssClass="input required" size="25"
+                        MaxLength="20" HintTitle="网站的后台管理目录" HintInfo="默认是Admin，如果你已经更改，请输入你更改过的目录名称，如“WebManger”，如果填写不正确，将可能导注系统无法使用。"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    文件上传目录：
+                </td>
+                <td>
+                    <asp:TextBox ID="txtWebFilePath" runat="server" CssClass="input required" size="50"
+                        MaxLength="255" HintTitle="文件上传目录" HintInfo="上传图片或附件的目录名称，该目录将会自动创建在网站根目录下，如：“UploadFiles”。"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    允许文件上传类型：
+                </td>
+                <td>
+                    <asp:TextBox ID="txtWebFileType" runat="server" CssClass="input required" size="50"
+                        MaxLength="255" HintTitle="允许上传文件扩展名" HintInfo="上传图片或附件时用于检测，以英文的|号分隔开，如：“jpg|gif|rar”。"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    允许文件上传大小：
+                </td>
+                <td>
+                    <asp:TextBox ID="txtWebFileSize" runat="server" CssClass="input required digits"
+                        MaxLength="9" size="5" HintTitle="允许上传文件大小" HintInfo="整数，如果超过设置的大小将不给予上传。"></asp:TextBox>
+                    &nbsp;KB
                 </td>
             </tr>
         </tbody>

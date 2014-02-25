@@ -9,7 +9,7 @@ namespace CMS.Common
 {
     public class UpLoad
     {
-        //private DtCms.Model.WebSet webset;
+        private CMS.Model.WebSet webset;
         private string filePath; //上传目录名
         private readonly string fileType; //文件类型
         private readonly int fileSize; //文件大小0为不限制
@@ -24,10 +24,10 @@ namespace CMS.Common
 
         public UpLoad()
         {
-            //webset = new DtCms.BLL.WebSet().loadConfig(Utils.GetXmlMapPath("Configpath"));
-            filePath = "LEDCMS/"+"UpLoadFiles/"; //webset.WebPath + webset.WebFilePath;
-            fileType = "GIF|JPG|PNG|BMP|RAR|DOC|XLS|TXT";// webset.WebFileType;
-            fileSize = 10240;// webset.WebFileSize;
+            webset = new CMS.DAL.WebSet().loadConfig(Utils.GetXmlMapPath("Configpath"));
+            filePath = webset.WebPath + webset.WebFilePath;
+            fileType = webset.WebFileType;
+            fileSize = webset.WebFileSize;
             isWatermark = 0;// webset.IsWatermark;
             waterStatus = 9;// webset.WatermarkStatus;
             waterQuality = 80;// webset.ImgQuality;

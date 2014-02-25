@@ -70,14 +70,14 @@
                                 </asp:BoundField>
                                 <asp:TemplateField HeaderText="属性">
                                     <ItemTemplate>
-                                        <asp:ImageButton ID="ibtnSlide" CommandName="ibtnSlide" runat="server" ImageUrl='<%# Convert.ToInt32("1") == 1 ? "../Images/ico-4.png" : "../Images/ico-4_.png"%>'
-                                            ToolTip='<%# Convert.ToInt32("1") == 1 ? "取消幻灯片" : "设置幻灯片"%>' />
+                                        <asp:ImageButton ID="ibtnSlide" CommandName="ibtnSlide" runat="server" ImageUrl='<%# Convert.ToInt32(Eval("CMS_IsSlide")) == 1 ? "../Images/ico-4.png" : "../Images/ico-4_.png"%>'
+                                            ToolTip='<%# Convert.ToInt32(Eval("CMS_IsSlide")) == 1 ? "取消幻灯片" : "设置幻灯片"%>' />
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="Center" />
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="操作">
                                     <ItemTemplate>
-                                        <a href="ProductsEdit.aspx?id=<%# Eval("ID") %>">修改</a>&nbsp; <a href="ProductsEdit.aspx?id=<%# Eval("ID") %>">删除</a>&nbsp;
+                                        <a href="ProductsEdit.aspx?id=<%# Eval("ID") %>">修改</a>
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="Center" />
                                 </asp:TemplateField>

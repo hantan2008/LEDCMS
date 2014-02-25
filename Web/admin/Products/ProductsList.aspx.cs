@@ -63,7 +63,7 @@ namespace Web.admin.Products
                 {
                     model = dal.GetModel(id);
                     //删除图片
-                    //DeleteFile(model.ImgUrl);
+                    DeleteFile(model.CMS_ProductImg);
                     //保存日志
                    // SaveLogs("[资讯模块]删除文章：" + model.Title);
                     //删除记录
@@ -72,10 +72,10 @@ namespace Web.admin.Products
                 }
             }
 
-            string js = "window.location.href('ProductsList.aspx');";
-            this.Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "js", "<script>alert('修改成功!');" + js + "</script>");
-
-
+            JscriptPrint("批量删除成功啦！", "ProductsList.aspx", "Success");
+           
         }
+
+
     }
 }

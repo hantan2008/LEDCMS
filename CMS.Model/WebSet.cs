@@ -19,6 +19,10 @@ namespace CMS.Model
 
         private string _webpath = "";
         private string _webmanagepath = "";
+        private string _webfilepath = "";
+        private string _webfiletype = "";
+        private int _webfilesize = 0;
+        
 
         /// <summary>
         ///  网站名称
@@ -110,7 +114,7 @@ namespace CMS.Model
         {
             set { _webpath = value; }
             get { return _webpath; }
-        }
+        }    
 
         /// <summary>
         ///  管理目录
@@ -119,6 +123,31 @@ namespace CMS.Model
         {
             set { _webmanagepath = value; }
             get { return _webmanagepath; }
+        }
+        /// <summary>
+        /// 文件上传的目录
+        /// </summary>
+        public string WebFilePath
+        {
+            set { _webfilepath = value; }
+            get { return _webfilepath; }
+        }
+        /// <summary>
+        /// 允许文件上传类型
+        /// </summary>
+        public string WebFileType
+        {
+            set { _webfiletype = value; }
+            get { return _webfiletype; }
+        }
+
+        /// <summary>
+        /// 允许文件上传大小
+        /// </summary>
+        public int WebFileSize
+        {
+            set { _webfilesize = value; }
+            get { return _webfilesize; }
         }
     }
 }

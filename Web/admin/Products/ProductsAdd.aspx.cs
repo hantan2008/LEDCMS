@@ -83,9 +83,7 @@ namespace Web.admin.Products
             CMS.DAL.CMS_Product dal = new CMS.DAL.CMS_Product();
             dal.Add(model);
 
-            string js = "window.location.href('ProductsList.aspx');";
-            this.Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "js", "<script>alert('修改成功!');"+js+"</script>");
-
+            JscriptPrint("产品信息添加成功！", "ProductsList.aspx", "Success");
         }
     }
 }

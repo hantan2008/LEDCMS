@@ -5,6 +5,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using CMS.Common;
+using System.IO;
 
 namespace CMS.Web.UI
 {
@@ -49,6 +50,24 @@ namespace CMS.Web.UI
             msbox += "parent.jsprint(\"" + msgtitle + "\",\"" + url + "\",\"" + msgcss + "\")\n";
             msbox += "</script>\n";
             ClientScript.RegisterClientScriptBlock(Page.GetType(), "JsPrint", msbox);
+        }
+
+        //==================================以下为文件操作函数===================================
+        /// <summary>
+        /// 删除单个文件
+        /// </summary>
+        /// <param name="_filepath">文件相对路径</param>
+        protected void DeleteFile(string _filepath)
+        {
+            if (string.IsNullOrEmpty(_filepath))
+            {
+                return;
+            }
+            string fullpath = Utils.GetMapPath(_filepath);
+            if (File.Exists(fullpath))
+            {
+                File.Delete(fullpath);
+            }
         }
     }
 

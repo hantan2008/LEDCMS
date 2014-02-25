@@ -25,7 +25,7 @@
             </script>
         </div>
         <!--内容部分-->
-        <div id="content">
+        <div id="content" style="width: 1003">
             <table width="1003" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                     <td width="19" height="37">
@@ -229,7 +229,7 @@
             </table>
         </div>
         <!--底部-->
-        <div id="bottom">
+        <div id="bottom" style="width: 1003">
             <uc1:Bottom ID="Bottom1" runat="server"  />
         </div>
     </center>

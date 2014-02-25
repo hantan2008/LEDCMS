@@ -61,12 +61,14 @@ namespace Web
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-
+                string strID = dt.Rows[i]["ID"].ToString();
+                string strProductImg = dt.Rows[i]["CMS_ProductImg"].ToString();
+                string strProductName = dt.Rows[i]["CMS_ProductName"].ToString();
 
                 strHTML.Append("<td valign=\"top\" width=\"150\">");
-                strHTML.Append("<a href=\"ProductView.aspx?id=" + dt.Rows[i]["ID"].ToString() + " \"  target=\"_blank\"> <img src=\"" + dt.Rows[i]["CMS_ProductImg"].ToString() + "\" alt=\"\" width=\"150\" height=\"150\" border=\"0\" /></a>");
+                strHTML.Append("<a href=\"ProductView.aspx?id=" + strID + " \"  target=\"_blank\"> <img src=\"" + strProductImg + "\" alt=\"\" width=\"150\" height=\"150\" border=\"0\" /></a>");
                 strHTML.Append(" ");
-                strHTML.Append("<span style=\"text-align:center\">" + dt.Rows[i]["CMS_ProductName"].ToString() + "</span>");
+                strHTML.Append("<span style=\"text-align:center\">" + strProductName + "</span>");
                 strHTML.Append("</td>");
                 strHTML.Append("<td valign=\"top\" width=\"5px\">");
                 strHTML.Append("</td>");
