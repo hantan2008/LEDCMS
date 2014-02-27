@@ -61,9 +61,12 @@
                                 <asp:BoundField DataField="CMS_ProductName" HeaderText="产品名称">
                                     <ItemStyle Width="20%" />
                                 </asp:BoundField>
-                                <asp:BoundField DataField="CMS_ProductClassID" HeaderText="产品类型">
-                                    <ItemStyle Width="20%" />
-                                </asp:BoundField>
+                               
+                                <asp:TemplateField HeaderText="产品类型">
+                                    <ItemTemplate>
+                                    <span><%# getProductClassName(Convert.ToInt32(Eval("CMS_ProductClassID")))%></span>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                                 <asp:BoundField DataField="CMS_Puter" HeaderText="发布者" />
                                 <asp:BoundField DataField="CMS_AddTime" HeaderText="发布时间">
                                     <ItemStyle Width="20%" />

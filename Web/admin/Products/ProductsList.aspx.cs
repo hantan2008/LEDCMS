@@ -76,6 +76,19 @@ namespace Web.admin.Products
            
         }
 
+        /// <summary>
+        /// 根据类别ID得到产品类别名称
+        /// </summary>
+        /// <param name="ProductClassID"></param>
+        /// <returns></returns>
+        public string getProductClassName(int ProductClassID)
+        {
+            string strClassName = "";
+            CMS.DAL.CMS_ProductClass dal = new CMS.DAL.CMS_ProductClass();
+            CMS.Model.CMS_ProductClass model = dal.GetModel(ProductClassID);
 
+            strClassName = model.CMS_ClassName;
+            return strClassName;
+        }
     }
 }

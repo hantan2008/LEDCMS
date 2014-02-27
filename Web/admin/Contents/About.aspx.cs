@@ -15,7 +15,7 @@ namespace Web.admin.Contents
             if (!IsPostBack)
             {
                 InitData();
-              
+
             }
         }
 
@@ -48,8 +48,7 @@ namespace Web.admin.Contents
             CMS.DAL.CMS_Contents dal = new CMS.DAL.CMS_Contents();
             dal.UpdateByCallindex(model);
 
-
-            this.Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "js", "<script>alert('修改成功!');</script>");
+            JscriptPrint("信息修改成功！", "ContentList.aspx", "Success");
         }
     }
 }

@@ -142,6 +142,26 @@ namespace CMS.DAL
         #endregion  成员方法
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="UID"></param>
+        /// <param name="MemberTypeId"></param>
+        /// <param name="PageIndex"></param>
+        /// <param name="PageSize"></param>
+        /// <param name="RecordCount"></param>
+        /// <param name="PageCount"></param>
+        /// <returns></returns>
+        public DataTable GetAll(string UID, string MemberTypeId, int PageIndex, int PageSize, out int RecordCount, out int PageCount)
+        {
+            string AllFields = " id,CMS_CallIndex,CMS_Title,CMS_Content";
+            string SqlTablesAndWhere = " CMS_Contents";
+            string IndexField = "ID";
+            string OrderFields = "order by ID Desc";
+            DataTable dt = CMS.DBUtility.DbHelperSQL.ExecutePage(AllFields, SqlTablesAndWhere, IndexField, OrderFields, PageIndex, PageSize, out RecordCount, out PageCount);
+
+            return dt;
+        }
+        /// <summary>
         /// 根据调用标示更新数据
         /// </summary>
         /// <param name="model"></param>
