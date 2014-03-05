@@ -6,9 +6,7 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" type="text/css" href="../Images/style.css" />
-
     <script language="javascript" type="text/javascript" src="../../js/jquery-1.3.2.min.js"></script>
-
     <script language="javascript" type="text/javascript">
         $(function () {
             $(".msgtable tr:nth-child(odd)").addClass("tr_bg"); //隔行变色
@@ -33,7 +31,6 @@
             }
         }
     </script>
-
 </head>
 <body>
     <form id="form1" runat="server">
@@ -54,17 +51,17 @@
                                 <asp:TemplateField HeaderText="选择">
                                     <ItemTemplate>
                                         <asp:CheckBox ID="cb_id" CssClass="checkall" runat="server" />
-                                        <asp:Label ID="lb_id" runat="Server" Text='<%#Eval("ID")%>' Visible=false></asp:Label>
+                                        <asp:Label ID="lb_id" runat="Server" Text='<%#Eval("ID")%>' Visible="false"></asp:Label>
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="Center" Width="5%" />
                                 </asp:TemplateField>
                                 <asp:BoundField DataField="CMS_ProductName" HeaderText="产品名称">
                                     <ItemStyle Width="20%" />
                                 </asp:BoundField>
-                               
                                 <asp:TemplateField HeaderText="产品类型">
                                     <ItemTemplate>
-                                    <span><%# getProductClassName(Convert.ToInt32(Eval("CMS_ProductClassID")))%></span>
+                                        <span>
+                                            <%# getProductClassName(Convert.ToInt32(Eval("CMS_ProductClassID")))%></span>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:BoundField DataField="CMS_Puter" HeaderText="发布者" />

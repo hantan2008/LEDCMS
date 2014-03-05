@@ -6,10 +6,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Text;
+using CMS.Web.UI;
 
 namespace Web
 {
-    public partial class Products : System.Web.UI.Page
+    public partial class Products : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

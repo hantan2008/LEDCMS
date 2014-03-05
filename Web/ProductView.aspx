@@ -5,7 +5,8 @@
 <%@ Register src="Control/ProductClass.ascx" tagname="ProductClass" tagprefix="uc3" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>产品详情</title>
+    <title><%= SiteConfig.WebName %>-产品详情</title>
+    <%=AddMetaInfo(SiteConfig.WebKeywords, SiteConfig.WebDescription)%>
     <link href="styles/css.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" language="javascript" src="js/menu.js"></script>
     <script src="js/FancyZoom.js" language="JavaScript" type="text/javascript"></script>
@@ -56,19 +57,15 @@
                                 </td>
                                 <td style="height: 230; vertical-align: top">
                                     <p>
-                                        地址：广东省深圳市</p>
+                                        地址：<%= baseset.CompanyAddress %></p>
                                     <p>
-                                        电话：0755-12345678</p>
+                                        电话：<%= baseset.CompanyTel %></p>
                                     <p>
-                                        传真：0755-12345678</p>
+                                        传真：<%= baseset.CompanyFax %></p>
                                     <p>
-                                        手机：13800138000</p>
+                                        QQ：<%= baseset.QQ%></p>
                                     <p>
-                                        QQ：12345678</p>
-                                    <p>
-                                        MSN：12345678@163.com</p>
-                                    <p>
-                                        Email：12345678@163.com</p>
+                                        Email：<%= baseset.Email%></p>
                                 </td>
                             </tr>
                         </table>

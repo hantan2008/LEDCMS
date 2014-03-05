@@ -12,6 +12,22 @@ namespace Web.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                InitData();
+            }
+        }
+
+        private void InitData()
+        {
+
+            lblWebSiteName.Text = webset.WebName;
+            lblDDNS.Text = webset.WebUrl;
+            lblPath.Text = webset.WebPath;
+            lblAdminPath.Text = webset.WebManagePath;
+            lblTel.Text = webset.WebTel;
+            lblfax.Text = webset.WebFax;
+            lblEmail.Text = webset.WebEmail;
 
         }
     }

@@ -170,6 +170,8 @@
     <Content Include="admin\Products\ProductsTypeAdd.aspx" />
     <Content Include="admin\Products\ProductsTypeEdit.aspx" />
     <Content Include="admin\Products\ProductsTypeList.aspx" />
+    <Content Include="admin\ServerManage\succeedcase\list.aspx" />
+    <Content Include="admin\ServerManage\ServerList.aspx" />
     <Content Include="admin\styles\css.css" />
     <Content Include="admin\styles\main.css" />
     <Content Include="admin\sysManage\AdminManage\AdminList.aspx" />
@@ -213,7 +215,10 @@
     <Content Include="Images\Content_21.jpg" />
     <Content Include="Images\Content_22.jpg" />
     <Content Include="Images\Content_23.jpg" />
-    <Content Include="Images\Content_27.jpg" />
+    <Content Include="Images\Content_27_01.gif" />
+    <Content Include="Images\Content_27_04.gif" />
+    <Content Include="Images\Content_27_07.gif" />
+    <Content Include="Images\Content_27_09.gif" />
     <Content Include="Images\Content_28.jpg" />
     <Content Include="Images\Content_29.jpg" />
     <Content Include="Images\Content_30.jpg" />
@@ -223,8 +228,10 @@
     <Content Include="Images\Content_34.jpg" />
     <Content Include="Images\Content_35.jpg" />
     <Content Include="Images\Content_36.jpg" />
-    <Content Include="Images\Content_37.jpg" />
-    <Content Include="Images\Content_38.jpg" />
+    <Content Include="Images\Content_37_1.jpg" />
+    <Content Include="Images\Content_37_2.jpg" />
+    <Content Include="Images\Content_37_3.jpg" />
+    <Content Include="Images\Content_37_4.jpg" />
     <Content Include="Images\Content_42.jpg" />
     <Content Include="Images\newdetail_02.jpg" />
     <Content Include="Images\newdetail_03.jpg" />
@@ -660,6 +667,20 @@
     </Compile>
     <Compile Include="admin\Products\ProductsTypeList.aspx.designer.cs">
       <DependentUpon>ProductsTypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ServerManage\succeedcase\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ServerManage\succeedcase\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ServerManage\ServerList.aspx.cs">
+      <DependentUpon>ServerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ServerManage\ServerList.aspx.designer.cs">
+      <DependentUpon>ServerList.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\sysManage\AdminManage\AdminList.aspx.cs">
       <DependentUpon>AdminList.aspx</DependentUpon>

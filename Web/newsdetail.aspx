@@ -1,16 +1,14 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="newsdetail.aspx.cs" Inherits="Web.newsdetail" %>
+
 <%@ Register Src="Control/Bottom.ascx" TagName="Bottom" TagPrefix="uc1" %>
 <%@ Register Src="Control/Top.ascx" TagName="Top" TagPrefix="uc2" %>
-
-
-<%@ Register src="Control/ProductClass.ascx" tagname="ProductClass" tagprefix="uc3" %>
-
-
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<%@ Register Src="Control/ProductClass.ascx" TagName="ProductClass" TagPrefix="uc3" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-        <link href="styles/css.css" rel="stylesheet" type="text/css" />
-
+    <title>
+        <%= SiteConfig.WebName %>-新闻资讯</title>
+    <%=AddMetaInfo(SiteConfig.WebKeywords, SiteConfig.WebDescription)%>
+    <link href="styles/css.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" language="javascript" src="js/menu.js"></script>
 </head>
 <body>
@@ -40,10 +38,8 @@
                             <tr>
                                 <td>
                                 </td>
-                                <td style="height: 500; vertical-align:top;">
-                                    
+                                <td style="height: 500; vertical-align: top;">
                                     <uc3:ProductClass ID="ProductClass1" runat="server" />
-                                    
                                 </td>
                             </tr>
                             <tr>
@@ -58,19 +54,15 @@
                                 </td>
                                 <td style="height: 230; vertical-align: top">
                                     <p>
-                                        地址：广东省深圳市</p>
+                                        地址：<%= baseset.CompanyAddress %></p>
                                     <p>
-                                        电话：0755-12345678</p>
+                                        电话：<%= baseset.CompanyTel %></p>
                                     <p>
-                                        传真：0755-12345678</p>
+                                        传真：<%= baseset.CompanyFax %></p>
                                     <p>
-                                        手机：13800138000</p>
+                                        QQ：<%= baseset.QQ%></p>
                                     <p>
-                                        QQ：12345678</p>
-                                    <p>
-                                        MSN：12345678@163.com</p>
-                                    <p>
-                                        Email：12345678@163.com</p>
+                                        Email：<%= baseset.Email%></p>
                                 </td>
                             </tr>
                         </table>
@@ -111,14 +103,17 @@
                             </tr>
                             <tr>
                                 <td align="center">
-                                    发布时间：<asp:Label ID="lblTime" runat="server" Text=""></asp:Label> 文章来源：<asp:Label ID="lblForm" runat="server" Text=""></asp:Label> 作者：<asp:Label ID="lblAuthor" runat="server" Text=""></asp:Label> 点击率：<asp:Label ID="lblClick" runat="server" Text=""></asp:Label>
+                                    发布时间：<asp:Label ID="lblTime" runat="server" Text=""></asp:Label>
+                                    文章来源：<asp:Label ID="lblForm" runat="server" Text=""></asp:Label>
+                                    作者：<asp:Label ID="lblAuthor" runat="server" Text=""></asp:Label>
+                                    点击率：<asp:Label ID="lblClick" runat="server" Text=""></asp:Label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <div style="margin-top: 10px">
                                         <asp:Label ID="lblContent" runat="server" Text=""></asp:Label>
-                                       </div>
+                                    </div>
                                 </td>
                             </tr>
                         </table>

@@ -11,10 +11,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Text;
+using CMS.Web.UI;
 
 namespace Web
 {
-    public partial class ProductView : System.Web.UI.Page
+    public partial class ProductView : BasePage
     {
         
 

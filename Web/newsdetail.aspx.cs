@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CMS.Web.UI;
 
 namespace Web
 {
-    public partial class newsdetail : System.Web.UI.Page
+    public partial class newsdetail : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

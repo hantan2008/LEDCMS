@@ -18,7 +18,7 @@ namespace Web.admin
                 this.lblAdminName.Text = "admin";
 
                 CMS.DAL.CMS_SysMod dal = new CMS.DAL.CMS_SysMod();
-                DataSet ds = dal.GetList("mod_level=1 and mod_isvisible = 1");
+                DataSet ds = dal.GetList("mod_level=1 and mod_isvisible = 1 order by mod_sortnum");
 
                 this.RepeaterMainMenu.DataSource = ds;
                 this.RepeaterMainMenu.DataBind();
@@ -26,7 +26,7 @@ namespace Web.admin
                 this.RepeaterMainMenu1.DataSource = ds;
                 this.RepeaterMainMenu1.DataBind();
 
-                DataSet dsChild = dal.GetList("mod_level=2 and mod_isvisible = 1");
+                DataSet dsChild = dal.GetList("mod_level=2 and mod_isvisible = 1 order by mod_sortnum");
                 this.RepeaterChild.DataSource = dsChild;
                 this.RepeaterChild.DataBind();
             }

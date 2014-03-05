@@ -3,14 +3,14 @@
 <%@ Register Src="Control/Bottom.ascx" TagName="Bottom" TagPrefix="uc1" %>
 <%@ Register Src="Control/Top.ascx" TagName="Top" TagPrefix="uc2" %>
 <%@ Register Src="Control/PageNavigator.ascx" TagName="PageNavigator" TagPrefix="uc3" %>
-<%@ Register src="Control/ProductClass.ascx" tagname="ProductClass" tagprefix="uc4" %>
+<%@ Register Src="Control/ProductClass.ascx" TagName="ProductClass" TagPrefix="uc4" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>
+        <%= SiteConfig.WebName %>-产品中心</title>
+    <%=AddMetaInfo(SiteConfig.WebKeywords, SiteConfig.WebDescription)%>
     <link href="styles/css.css" rel="stylesheet" type="text/css" />
-
     <script type="text/javascript" language="javascript" src="js/menu.js"></script>
-
 </head>
 <body>
     <form id="form1" runat="server">
@@ -39,9 +39,9 @@
                             <tr>
                                 <td>
                                 </td>
-                                <td style="height: 500; vertical-align:top;">
+                                <td style="height: 500; vertical-align: top;">
                                     <uc4:ProductClass ID="ProductClass1" runat="server" />
-                                    </td>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -55,19 +55,15 @@
                                 </td>
                                 <td style="height: 230; vertical-align: top">
                                     <p>
-                                        地址：广东省深圳市</p>
+                                        地址：<%= baseset.CompanyAddress %></p>
                                     <p>
-                                        电话：0755-12345678</p>
+                                        电话：<%= baseset.CompanyTel %></p>
                                     <p>
-                                        传真：0755-12345678</p>
+                                        传真：<%= baseset.CompanyFax %></p>
                                     <p>
-                                        手机：13800138000</p>
+                                        QQ：<%= baseset.QQ%></p>
                                     <p>
-                                        QQ：12345678</p>
-                                    <p>
-                                        MSN：12345678@163.com</p>
-                                    <p>
-                                        Email：12345678@163.com</p>
+                                        Email：<%= baseset.Email%></p>
                                 </td>
                             </tr>
                         </table>
@@ -101,7 +97,7 @@
                                         <ul style="list-style-type: none; float: left; width: 100%">
                                             <asp:Repeater ID="Repeater1" runat="server">
                                                 <ItemTemplate>
-                                                    <li style="width: 30%; float: left; margin:10 10 10 10;">
+                                                    <li style="width: 30%; float: left; margin: 10 10 10 10;">
                                                         <table style="width: 100%; padding-top: 2px; padding-right: 1px; padding-left: 1px;"
                                                             border="0" cellpadding="0" cellspacing="0">
                                                             <tr>
@@ -118,7 +114,6 @@
                                                             </tr>
                                                         </table>
                                                     </li>
-                                                    
                                                 </ItemTemplate>
                                             </asp:Repeater>
                                         </ul>

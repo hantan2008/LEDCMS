@@ -8,7 +8,8 @@ namespace CMS.Web.UI
 {
     public class BasePage : System.Web.UI.Page
     {
-        protected internal CMS.Model.WebSet SiteConfig = new CMS.DAL.WebSet().loadConfig(Utils.GetXmlMapPath("Configpath"));
+        protected CMS.Model.CMS_Baseset baseset = new CMS.DAL.CMS_Baseset().GetModel(1);//网站基本信息
+        protected internal CMS.Model.WebSet SiteConfig = new CMS.DAL.WebSet().loadConfig(Utils.GetXmlMapPath("Configpath"));//网站配置
 
         public BasePage()
         {

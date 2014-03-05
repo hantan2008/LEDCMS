@@ -35,8 +35,8 @@ namespace Web.admin.News
             this.PageNavigator1.PageCount = j;
             this.PageNavigator1.PageIndex = PageIndex;
             this.PageNavigator1.RecordCount = i;
-            gvNewList.DataSource = dt;
-            gvNewList.DataBind();
+            gvdataList.DataSource = dt;
+            gvdataList.DataBind();
         }
 
         void PageNavigator1_OnPageChange(object send, int nPageIndex)
@@ -45,6 +45,41 @@ namespace Web.admin.News
         }
 
 
+        protected void lbtnDel_Click(object sender, EventArgs e)
+        {
+            CMS.DAL.CMS_News dal = new CMS.DAL.CMS_News();
 
+            for (int i = 0; i < gvdataList.Rows.Count; i++)
+            {
+                Label label = (Label)gvdataList.Rows[i].FindControl("lb_id");
+                int id = Convert.ToInt32(label.Text);
+                CheckBox cb = (CheckBox)gvdataList.Rows[i].FindControl("cb_id");
+                if (cb.Checked)
+                {
+                    //保存日志
+                    // SaveLogs("[资讯模块]删除文章：" + model.Title);
+                    //删除记录
+                    //bll.Delete(kindId, id);
+                    dal.Delete(id);
+                }
+            }
+
+            JscriptPrint("批量删除成功啦！", "NewsList.aspx", "Success");
+
+        }
+        /// <summary>
+        /// 根据类型ID获取类型名称
+        /// </summary>
+        /// <param name="ClassID"></param>
+        /// <returns></returns>
+        public string getClassName(int ClassID)
+        {
+            string strClassName = "";
+            CMS.DAL.CMS_NewsType dal = new CMS.DAL.CMS_NewsType();
+            CMS.Model.CMS_NewsType model = dal.GetModel(ClassID);
+
+            strClassName = model.CMS_TypeName;
+            return strClassName;
+        }
     }
 }

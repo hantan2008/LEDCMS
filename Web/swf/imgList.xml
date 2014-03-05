@@ -6,7 +6,6 @@
 <list path="swf/img/03.jpg"   smallpath="swf/img/03.png" smallinfo="">http://www.hzled-china.com/</list>
 <list path="swf/img/04.jpg"   smallpath="swf/img/04.png" smallinfo="">http://www.hzled-china.com/</list>
 <list path="swf/img/05.jpg"   smallpath="swf/img/05.png" smallinfo="">http://www.hzled-china.com/</list>
-<list path="swf/img/051.jpg"   smallpath="swf/img/05.png" smallinfo="">http://www.hzled-china.com/</list>
 </pic>
 <rollTime fade_in="10">4</rollTime>
 <text font="Arial" size="12" bold="true" color="0xffffff"></text>

@@ -6,23 +6,31 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" type="text/css" href="../Images/style.css" />
-
     <script language="javascript" type="text/javascript" src="../../js/jquery-1.3.2.min.js"></script>
-
     <script language="javascript" type="text/javascript">
-        $(function() {
+        $(function () {
             $(".msgtable tr:nth-child(odd)").addClass("tr_bg"); //隔行变色
             $(".msgtable tr").hover(
-			    function() {
+			    function () {
 			        $(this).addClass("tr_hover_col");
 			    },
-			    function() {
+			    function () {
 			        $(this).removeClass("tr_hover_col");
 			    }
 		    );
         });
-    </script>
 
+        //全选取消按钮函数，调用样式如：
+        function checkAll(chkobj) {
+            if ($(chkobj).text() == "全选") {
+                $(chkobj).text("取消");
+                $(".checkall input").attr("checked", true);
+            } else {
+                $(chkobj).text("全选");
+                $(".checkall input").attr("checked", false);
+            }
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -36,38 +44,34 @@
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tr>
                     <td>
-                        <asp:GridView ID="gvNewList" runat="server" Width="100%" AutoGenerateColumns="False"
+                        <asp:GridView ID="gvdataList" runat="server" Width="100%" AutoGenerateColumns="False"
                             Height="112px" CssClass="msgtable">
                             <Columns>
-                            <asp:TemplateField HeaderText="选择">
+                                <asp:TemplateField HeaderText="选择">
                                     <ItemTemplate>
                                         <asp:CheckBox ID="cb_id" CssClass="checkall" runat="server" />
-                                        
+                                        <asp:Label ID="lb_id" runat="Server" Text='<%#Eval("ID")%>' Visible="false"></asp:Label>
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="Center" Width="5%" />
                                 </asp:TemplateField>
                                 <asp:BoundField DataField="CMS_Title" HeaderText="新闻标题">
                                     <ItemStyle Width="20%" />
                                 </asp:BoundField>
-                                <asp:BoundField DataField="CMS_Type" HeaderText="新闻类型">
-                                    <ItemStyle Width="20%" />
-                                </asp:BoundField>
+                                <asp:TemplateField HeaderText="新闻类型">
+                                    <ItemTemplate>
+                                        <span>
+                                            <%# getClassName(Convert.ToInt32(Eval("CMS_Type")))%></span>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                                 <asp:BoundField DataField="CMS_Author" HeaderText="作者" />
                                 <asp:BoundField DataField="CMS_Puter" HeaderText="发布者" />
                                 <asp:BoundField DataField="CMS_Time" HeaderText="发布时间">
                                     <ItemStyle Width="20%" />
                                 </asp:BoundField>
-                                 <asp:TemplateField HeaderText="属性">
-                                    <ItemTemplate>
-                                        <asp:ImageButton ID="ibtnSlide" CommandName="ibtnSlide" runat="server" ImageUrl='<%# Convert.ToInt32("1") == 1 ? "../Images/ico-4.png" : "../Images/ico-4_.png"%>'
-                                            ToolTip='<%# Convert.ToInt32("1") == 1 ? "取消幻灯片" : "设置幻灯片"%>' />
-                                    </ItemTemplate>
-                                    <ItemStyle HorizontalAlign="Center" />
-                                </asp:TemplateField>
+                                
                                 <asp:TemplateField HeaderText="操作">
                                     <ItemTemplate>
-                                        <a href="NewsEdit.aspx?id=<%# Eval("ID") %>">修改</a>&nbsp; <a href="NewsEdit.aspx?id=<%# Eval("ID") %>">
-                                            查看</a>
+                                        <a href="NewsEdit.aspx?id=<%# Eval("ID") %>">修改</a> 
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="Center" />
                                 </asp:TemplateField>
@@ -80,7 +84,11 @@
                 style="height: 20px">
                 <tr>
                     <td>
-                        全选<input id="chkall" type="checkbox" onclick="SelectAll(chkall)" />
+                        <span class="btn_all" onclick="checkAll(this);">全选</span>
+                        <span class="btn_bg">
+                            <asp:LinkButton ID="lbtnDel" runat="server" OnClientClick="return confirm( '确定要删除这些记录吗？ ');"
+                                OnClick="lbtnDel_Click">删 除</asp:LinkButton>
+                        </span>
                     </td>
                     <td class="noprint">
                         <uc1:PageNavigator ID="PageNavigator1" runat="server" />
